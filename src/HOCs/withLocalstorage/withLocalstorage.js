@@ -4,12 +4,12 @@ import {load, save} from '../../localstorage';
 const withLocalstorage = (localStorageKey, data) => (WrappedComponent) => {
     return class extends Component {
 
-        saveData = () => {
+        saveData = (data) => {
             save(localStorageKey, data);
         };
 
         savedData = () => {
-            load(localStorageKey);
+            return load(localStorageKey);
         };
 
         render() {

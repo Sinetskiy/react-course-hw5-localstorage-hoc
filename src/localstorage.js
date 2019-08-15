@@ -3,7 +3,7 @@ function load(localStorageKey) {
   let data = null;
 
   try {
-    data = JSON.parse(stringData);
+    data = JSON.parse(stringData) || [];
   } catch (e) {}
 
   return data;
